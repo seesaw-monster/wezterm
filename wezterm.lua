@@ -1,17 +1,23 @@
 local wezterm = require 'wezterm';
 
-return {
-    font = wezterm.font("DroidSansM Nerd Font"),
-    use_ime = true,
-    font_size = 17.0,
-    -- color_scheme = "OneHalfDark", -- https://wezfurlong.org/wezterm/colorschemes/index.html
-    color_scheme = "Dracula (Official)",
-    -- window_decorations = "RESIZE", -- 最小化・最大化ボタンがある領域を非表示に（移動ができなくなったので，コメント化）
+local config = {}
 
-    hide_tab_bar_if_only_one_tab = true,
-    adjust_window_size_when_changing_font_size = false,
-    force_reverse_video_cursor = true,
+if wezterm.config_builder then
+  config = wezterm.config_builder()
+end
 
-    -- weindowsはPowerShellを利用
-    default_prog = wezterm.target_triple == 'x86_64-pc-windows-msvc' and {'powershell.exe'} or nil,
-}
+-- 
+config.font = wezterm.font("DroidSansM Nerd Font")
+config.font_size = 17.0
+config.use_ime = true
+
+-- https://wezfurlong.org/wezterm/colorschemes/index.html
+config.color_scheme = "Dracula (Official)"
+config.hide_tab_bar_if_only_one_tab = true
+config.adjust_window_size_when_changing_font_size = false
+config.force_reverse_video_cursor = true
+
+-- weindowsはPowerShellを利用
+config.default_prog = wezterm.target_triple == 'x86_64-pc-windows-msvc' and {'powershell.exe'} or nil
+
+return config
