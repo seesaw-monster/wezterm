@@ -30,7 +30,7 @@ config.mouse_bindings = {
 
 -- Others #########################################################################
 -- weindows はPowerShell を利用
-config.default_prog = wezterm.target_triple == 'x86_64-pc-windows-msvc' and {'powershell.exe'} or nil
+config.default_prog = wezterm.target_triple == 'x86_64-pc-windows-msvc' and {'C:\\Program Files\\PowerShell\\7\\pwsh.exe'} or nil
 
 -- update
 config.check_for_updates = false
