@@ -10,6 +10,8 @@ end
 config.font = wezterm.font(wezterm.target_triple == 'x86_64-pc-windows-msvc' and "DroidSansM Nerd Font" or "DroidSansMono Nerd Font")
 config.font_size = 17.0
 config.use_ime = true
+config.window_background_opacity = 0.85
+config.macos_window_background_blur = 20
 
 -- https://wezfurlong.org/wezterm/colorschemes/index.html
 config.color_scheme = "Dracula (Official)"
