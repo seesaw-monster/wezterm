@@ -11,11 +11,17 @@ end
 config.font = wezterm.font("DroidSansM Nerd Font")
 config.font_size = 17.0
 config.use_ime = true
+-- transparency
+-- config.window_background_opacity = 0.85
+-- config.macos_window_background_blur = 20
 
 -- https://wezfurlong.org/wezterm/colorschemes/index.html
 config.color_scheme = "Dracula (Official)"
+-- title bar
+config.window_decorations = "RESIZE"
+-- tab bar
+config.show_new_tab_button_in_tab_bar = false
 
-config.hide_tab_bar_if_only_one_tab = true
 config.adjust_window_size_when_changing_font_size = false
 config.force_reverse_video_cursor = true
 
@@ -28,6 +34,9 @@ config.mouse_bindings = {
     action = wezterm.action.PasteFrom 'Clipboard',
   },
 }
+-- keybinds
+config.keys = require("keybinds").keys
+config.key_tables = require("keybinds").key_tables
 
 -- Others #########################################################################
 -- weindows はPowerShell を利用
