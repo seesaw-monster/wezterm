@@ -34,8 +34,6 @@ config.keys = require("keybinds").keys
 config.key_tables = require("keybinds").key_tables
 
 -- Others #########################################################################
--- weindows はPowerShell を利用
-config.default_prog = wezterm.target_triple == 'x86_64-pc-windows-msvc' and {'C:\\Program Files\\PowerShell\\7\\pwsh.exe'} or nil
 
 -- update
 config.check_for_updates = false
