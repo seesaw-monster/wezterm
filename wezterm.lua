@@ -17,7 +17,7 @@ config.font_size = 17.0
 config.use_ime = true
 
 -- https://wezfurlong.org/wezterm/colorschemes/index.html
-config.color_scheme = "Dracula (Official)"
+-- config.color_scheme = "Dracula (Official)"
 -- title bar
 config.window_decorations = "RESIZE"
 
