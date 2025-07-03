@@ -11,13 +11,12 @@ if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
   config.default_prog = { 'powershell.exe' }
 end
 -- Visual #########################################################################
--- config.font = wezterm.font(wezterm.target_triple == 'x86_64-pc-windows-msvc' and "DroidSansM Nerd Font" or "DroidSansMono Nerd Font")
 config.font = wezterm.font("DroidSansM Nerd Font")
 config.font_size = 17.0
 config.use_ime = true
 
 -- https://wezfurlong.org/wezterm/colorschemes/index.html
--- config.color_scheme = "Dracula (Official)"
+config.color_scheme = "Dracula (Official)"
 -- title bar
 config.window_decorations = "RESIZE"
 
