@@ -152,6 +152,7 @@ return {
       { key = 'Tab', mods = 'SHIFT', action = act.CopyMode 'MoveBackwardWord' },
       { key = 'Enter', mods = 'NONE', action = act.CopyMode 'MoveToStartOfNextLine' },
       { key = 'Escape', mods = 'NONE', action = act.CopyMode 'Close' },
+      { key = '[', mods = 'CTRL', action = act.CopyMode 'Close' },
       { key = 'Space', mods = 'NONE', action = act.CopyMode{ SetSelectionMode =  'Cell' } },
       { key = '$', mods = 'NONE', action = act.CopyMode 'MoveToEndOfLineContent' },
       { key = '$', mods = 'SHIFT', action = act.CopyMode 'MoveToEndOfLineContent' },
