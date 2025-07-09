@@ -157,6 +157,7 @@ return {
       { key = 'i', action = act.CopyMode 'Close' },
       { key = '[', mods = 'CTRL', action = act.CopyMode 'Close' },
       { key = 'y', mods = 'CTRL', action = act.ScrollByPage(-0.05) },
+-- { key = 'e', mods = 'CTRL', action = act.CopyMode{ MoveByPage = 0.5 } }
       { key = 'e', mods = 'CTRL', action = act.ScrollByPage(0.1) },
       { key = 'Space', mods = 'NONE', action = act.CopyMode{ SetSelectionMode =  'Cell' } },
       { key = '$', mods = 'NONE', action = act.CopyMode 'MoveToEndOfLineContent' },
