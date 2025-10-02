@@ -15,8 +15,18 @@ config.font = wezterm.font("DroidSansM Nerd Font")
 config.font_size = 17.0
 config.use_ime = true
 
+-- システムの外観に応じたカラースキーマを選択
+local function scheme_for_appearance(appearance)
+  if appearance:find('Dark') then
+    return 'Tokyo Night Storm'
+  else
+    return '3024 (light) (terminal.sexy)'
+  end
+end
+
 -- https://wezfurlong.org/wezterm/colorschemes/index.html
-config.color_scheme = "Dracula (Official)"
+-- システムの外観を取得してカラースキーマを設定
+config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
 -- title bar
 config.window_decorations = "RESIZE"
 
