@@ -146,6 +146,8 @@ return {
     { key = 'Paste', mods = 'NONE', action = act.PasteFrom 'Clipboard' },
     -- Ctrl+[ を Escape に割り当て
     { key = '[', mods = 'CTRL', action = act.SendKey { key = 'Escape' } },
+    -- Shift+Enter で ESC + Enter を送信
+    { key = 'Enter', mods = 'SHIFT', action = act.SendString("\x1b\r") },
   },
 
   key_tables = {
